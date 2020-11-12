@@ -8,7 +8,6 @@ const initData = {
   fdata: [] //検索したメモをまとめておくもの
 }
 
-//reducerはタイプごとの分岐を行うだけにする
 export const memoReducer = (state = initData, action) => {
   switch (action.type) {
     case 'ADD':
@@ -39,6 +38,7 @@ const addReducer = (state, action) => {
     message: "Added",
     mode: "dafault",
     fdata: []
+    //stateが変更されて、再レンダリングされる
   }
 }
 

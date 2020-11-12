@@ -21,7 +21,7 @@ class App extends Component {
         <hr />
         <table><tbody><tr>
           <td style={this.td}><FindForm /></td>
-          <td style={this.td}><DeldForm /></td>
+          <td style={this.td}><DelForm /></td>
         </tr></tbody></table>
         <Memo />
       </div>
