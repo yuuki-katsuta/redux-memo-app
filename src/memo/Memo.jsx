@@ -11,8 +11,8 @@ class Memo extends React.Component {
       //state更新⇢再レンダリング
       case 'default':
         //sateにはthis.propsでアクセスする。そのためにconnectを使う
-        data = this.props.data.map((value) => (
-          <Item key={value.message} value={value} index={n++} />
+        data = this.props.data.map((value, index) => (
+          <Item key={index} value={value} index={n++} />
           //valueには、data: [{ message: "sample data", created: new Date() }]が渡ってくる
         ))
         break
@@ -30,8 +30,8 @@ class Memo extends React.Component {
         break
 
       default:
-        data = this.props.data.map((value) => (
-          <Item key={value.message} value={value} index={n++} />
+        data = this.props.data.map((value, index) => (
+          <Item key={index} value={value} index={n++} />
         ))
         break
     }
