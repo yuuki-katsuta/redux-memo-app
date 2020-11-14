@@ -1,6 +1,5 @@
 import React from 'react'
 import { connect } from 'react-redux'
-
 import Item from './Item'
 
 class Memo extends React.Component {
@@ -14,6 +13,7 @@ class Memo extends React.Component {
         //sateにはthis.propsでアクセスする。そのためにconnectを使う
         data = this.props.data.map((value) => (
           <Item key={value.message} value={value} index={n++} />
+          //valueには、data: [{ message: "sample data", created: new Date() }]が渡ってくる
         ))
         break
 
