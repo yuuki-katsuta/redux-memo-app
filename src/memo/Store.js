@@ -9,6 +9,7 @@ const initData = {
 }
 
 export const memoReducer = (state = initData, action) => {
+  //actionにはreturn {type: 'ADD',　message: text}が渡ってくる
   switch (action.type) {
     case 'ADD':
       return addReducer(state, action);
@@ -26,6 +27,7 @@ const addReducer = (state, action) => {
   //stateは初期値initdata
   let data = {
     message: action.message,
+    //userの入力値messageを値に設定
     created: new Date()
   };
   let newData = state.data.slice();
@@ -74,6 +76,7 @@ const deleteReducer = (state, action) => {
   }
 }
 
+//アクション
 export const addMemo = (text) => {
   return {
     type: 'ADD',
