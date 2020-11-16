@@ -18,14 +18,14 @@ class Memo extends React.Component {
         break
 
       case 'find':
-        data = this.props.fdata.map((value) => (
-          <Item key={value.message} value={value} index={n++} />
+        data = this.props.fdata.map((value, index) => (
+          <Item key={index} value={value} index={n++} />
         ))
         break
 
       case 'delete':
-        data = this.props.data.map((value) => (
-          <Item key={value.message} value={value} index={n++} />
+        data = this.props.data.map((value, index) => (
+          <Item key={index} value={value} index={n++} />
         ))
         break
 
