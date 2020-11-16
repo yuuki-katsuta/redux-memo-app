@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import './App.css';
 import Memo from './memo/Memo'
 import AddForm from './memo/AddForm'
-import FindForm from './memo/FindForm'
+import FindForm from './memo/FindForm.jsx'
 import DelForm from './memo/DelForm'
 
 

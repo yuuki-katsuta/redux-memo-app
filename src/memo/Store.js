@@ -9,7 +9,7 @@ const initData = {
 }
 
 export const memoReducer = (state = initData, action) => {
-  //actionにはreturn {type: 'ADD',　message: text}が渡ってくる
+  //actionにはreturn {type: 'ADD', message: text}が渡ってくる
   switch (action.type) {
     case 'ADD':
       return addReducer(state, action);
@@ -67,7 +67,7 @@ const findReducer = (state, action) => {
 const deleteReducer = (state, action) => {
   let newdata = state.data.slice()
   newdata.splice(action.index, 1)
-  //newdataは連想配列？？　action.indexは変更する位置、１は何個の要素を取り除くかを表す
+  //newdataは連想配列？？action.indexは変更する位置、１は何個の要素を取り除くかを表す
   return {
     data: newdata,
     message: `delete ${action.index}`,

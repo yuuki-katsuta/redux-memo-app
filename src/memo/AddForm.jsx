@@ -32,6 +32,7 @@ const AddForm = (props) => {
     messageHandler(e.target.value)
   }
 
+  //props.を使えばstoreのデータにアクセスしている
   return (
     <div>
       <p style={styles.message}>{props.message}</p>
