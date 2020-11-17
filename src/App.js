@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
 import './App.css';
 import Memo from './memo/Memo'
 import AddForm from './memo/AddForm'
@@ -10,6 +11,7 @@ class App extends Component {
   td = {
     width: "250px"
   }
+  // eslint-disable-next-line
   constructor(props) {
     super(props)
   }
@@ -28,4 +30,4 @@ class App extends Component {
     )
   }
 }
-export default App;
+export default connect()(App);

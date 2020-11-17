@@ -29,11 +29,11 @@ const Item = (props) => {
   }
   //作成した時刻
   let d = props.value.created;
-  let f = d.getHours() + ':' + d.getMinutes() + ':' + d.getSeconds();
+
   return (
     <tr><th style={styles.th}>No, {props.index}</th>
       <td style={styles.td}>{props.value.message}</td>
-      <td style={styles.date}>{f}</td>
+      <td style={styles.date}>{d}</td>
     </tr>
   );
 }
