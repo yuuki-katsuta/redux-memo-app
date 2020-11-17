@@ -2,7 +2,7 @@ import { createStore } from 'redux'
 
 //メモに関するデータの初期値
 const initData = {
-  data: [{ message: "sample data", created: new Date() }],
+  data: [],
   message: "please type message",
   mode: "default",
   fdata: [] //検索したメモをまとめておくもの
@@ -24,11 +24,13 @@ export const memoReducer = (state = initData, action) => {
 }
 
 const addReducer = (state, action) => {
+  let d = new Date()
+  let f = d.getHours() + ':' + d.getMinutes() + ':' + d.getSeconds();
   //stateは初期値initdata
   let data = {
     message: action.message,
     //userの入力値messageを値に設定
-    created: new Date()
+    created: f
   };
   let newData = state.data.slice();
   //sliceでdata: [{ message: "sample data", created: new Date() }],から要素を取り出して新しい配列を作成する
