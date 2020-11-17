@@ -45,3 +45,5 @@ class Memo extends React.Component {
 //stateを受け取りstateを返すだけだが、[このコンポーネントで利用するstateを返す関数]の意味（ここではすべてのstateを利用できるようにした）
 //これをconnectの引数に設定して、Memoコンポーネントを第二引数に指定するとstoreのstateにアクセスできるようになる
 export default connect((state) => state)(Memo)
+
+//(state) => state でstoreに登録されているstateをすべて参照できるようになっているため、そのstoreのstateに一つでも変更があった場合、再レンダリングされる

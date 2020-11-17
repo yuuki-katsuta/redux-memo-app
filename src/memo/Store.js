@@ -32,7 +32,7 @@ const addReducer = (state, action) => {
   };
   let newData = state.data.slice();
   //sliceでdata: [{ message: "sample data", created: new Date() }],から要素を取り出して新しい配列を作成する
-  //reduxではstate.dataを直接操作してそのままstate.dataを返すと「変更なし」と認識されてしまうため　新しい配列をつくりsetStateする
+  //reduxではstate.dataを直接操作してそのままstate.dataを返すと「変更なし」と認識されてしまうため新しい配列をつくりsetStateする
   newData.unshift(data)
   //unshiftで配列の最初にどんどん追加する
   return {
@@ -46,11 +46,11 @@ const addReducer = (state, action) => {
 
 const findReducer = (state, action) => {
   let f = action.find;
-  let fdata = []
+  let fdata = []  ////検索したメモをが格納される
   //addReducerの処理によりstate.dataには新しいデータが追加されていく
   state.data.forEach((value) => {
     if (value.message.indexOf(f) >= 0) {
-      //value.message.indexOf(f) >= 0で,　その積み上がった配列のデータから検索文字を探し出す
+      //value.message.indexOf(f) >= 0で,その積み上がった配列のデータから検索文字を探し出す
       //indexOf(f) >= 0は、もし、先頭から1文字ずつ検索して8番目からの文字列が「apple」と一致したら、「8」という数値を返す
       //値が見つからない場合は -1 を返します。
       fdata.push(value)
